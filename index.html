@@ -1,0 +1,373 @@
+All 3 files are also bundled as **`/app/landing/botly-media-landing.zip`**. Below are the full contents you can copy directly:
+
+---
+
+### 📄 `index.html`
+Action: file_editor view /app/landing/index.html
+Observation: [Showing lines 1-365 of 365 total] /app/landing/index.html:
+1|<!DOCTYPE html>
+2|<html lang="en">
+3|<head>
+4|  <meta charset="UTF-8" />
+5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+6|  <meta name="description" content="Botly Media - AI automation for coaches, creators and consultants. Book more clients on autopilot." />
+7|  <title>Botly Media — AI systems that book clients 24/7</title>
+8|
+9|  <link rel="icon" type="image/png" href="botly-logo.png" />
+10|
+11|  <!-- Fonts -->
+12|  <link rel="preconnect" href="https://fonts.googleapis.com">
+13|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+14|  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+15|
+16|  <!-- Lucide icons (CDN) -->
+17|  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+18|
+19|  <link rel="stylesheet" href="style.css" />
+20|</head>
+21|<body>
+22|  <!-- Decorative gradient blobs -->
+23|  <div class="blobs" aria-hidden="true">
+24|    <div class="blob blob-1"></div>
+25|    <div class="blob blob-2"></div>
+26|    <div class="blob blob-3"></div>
+27|    <div class="grain"></div>
+28|  </div>
+29|
+30|  <!-- ============ NAVBAR ============ -->
+31|  <header class="nav-wrap">
+32|    <nav class="nav glass" data-testid="main-nav">
+33|      <a href="#" class="brand" data-testid="brand-link">
+34|        <img src="botly-logo.png" alt="Botly Media logo" class="brand-logo" />
+35|        <span class="brand-name">Botly Media</span>
+36|      </a>
+37|
+38|      <ul class="nav-links" data-testid="nav-links">
+39|        <li><a href="#workflow">Workflow</a></li>
+40|        <li><a href="#results">Results</a></li>
+41|        <li><a href="#process">Process</a></li>
+42|      </ul>
+43|
+44|      <a href="https://calendly.com/botlymedia/new-meeting"
+45|         target="_blank" rel="noopener noreferrer"
+46|         class="btn btn-primary nav-cta"
+47|         data-testid="nav-cta-book">
+48|        Book Free Audit
+49|      </a>
+50|
+51|      <button class="nav-mobile-toggle" aria-label="Toggle menu" data-testid="mobile-menu-toggle">
+52|        <span></span><span></span><span></span>
+53|      </button>
+54|    </nav>
+55|  </header>
+56|
+57|  <!-- ============ HERO ============ -->
+58|  <section class="hero" data-testid="hero-section">
+59|    <div class="hero-grid">
+60|      <div class="hero-copy reveal">
+61|        <span class="eyebrow">
+62|          <span class="dot"></span> Now onboarding 5 coaches
+63|        </span>
+64|        <h1 class="headline">
+65|          Scale your coaching business with
+66|          <span class="gradient-text">AI&nbsp;systems</span>
+67|          that book clients 24/7
+68|        </h1>
+69|        <p class="sub">
+70|          Stop chasing leads at midnight. Botly Media builds plug-and-play AI workflows that capture, qualify and book your dream clients — so you can focus on coaching, not admin.
+71|        </p>
+72|
+73|        <div class="cta-row">
+74|          <a href="https://calendly.com/botlymedia/new-meeting"
+75|             target="_blank" rel="noopener noreferrer"
+76|             class="btn btn-primary btn-lg"
+77|             data-testid="hero-cta-book">
+78|            Book Your Free AI Strategy Audit
+79|            <i data-lucide="arrow-up-right"></i>
+80|          </a>
+81|          <a href="#workflow" class="btn btn-ghost btn-lg" data-testid="hero-cta-secondary">
+82|            <i data-lucide="play-circle"></i>
+83|            See how it works
+84|          </a>
+85|        </div>
+86|
+87|        <div class="trust-row">
+88|          <div class="avatars">
+89|            <span class="avatar a1"></span>
+90|            <span class="avatar a2"></span>
+91|            <span class="avatar a3"></span>
+92|            <span class="avatar a4"></span>
+93|          </div>
+94|          <p>Trusted by coaches across <strong>US · UK · Dubai · Canada</strong></p>
+95|        </div>
+96|      </div>
+97|
+98|      <!-- Calendar booking mockup -->
+99|      <div class="hero-mock reveal" data-testid="hero-mockup">
+100|        <div class="mock-card glass-strong">
+101|          <div class="mock-header">
+102|            <div class="mock-avatar"></div>
+103|            <div>
+104|              <p class="mock-name">AI Strategy Audit</p>
+105|              <p class="mock-role">with Botly Media · 30 min</p>
+106|            </div>
+107|            <span class="mock-badge"><span class="dot dot-green"></span> Live</span>
+108|          </div>
+109|
+110|          <div class="mock-body">
+111|            <p class="mock-month">December 2025</p>
+112|            <div class="mock-cal">
+113|              <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+114|              <span>1</span><span>2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><span>6</span><span>7</span>
+115|              <span class="day">8</span><span class="day active">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><span>13</span><span>14</span>
+116|              <span class="day">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span><span>20</span><span>21</span>
+117|            </div>
+118|
+119|            <p class="mock-month" style="margin-top:18px">Tue, Dec 9</p>
+120|            <div class="mock-slots">
+121|              <button class="slot">9:00 AM</button>
+122|              <button class="slot active">10:30 AM</button>
+123|              <button class="slot">2:00 PM</button>
+124|              <button class="slot">4:30 PM</button>
+125|            </div>
+126|          </div>
+127|
+128|          <a href="https://calendly.com/botlymedia/new-meeting"
+129|             target="_blank" rel="noopener noreferrer"
+130|             class="mock-confirm"
+131|             data-testid="mockup-confirm">
+132|            Confirm booking <i data-lucide="check-circle-2"></i>
+133|          </a>
+134|        </div>
+135|
+136|        <!-- Floating chat bubble -->
+137|        <div class="float-card glass-strong" aria-hidden="true">
+138|          <div class="float-icon"><i data-lucide="bot"></i></div>
+139|          <div>
+140|            <p class="float-title">AI Assistant</p>
+141|            <p class="float-text">"Booked Sarah for Tuesday 10:30 AM ✓"</p>
+142|          </div>
+143|        </div>
+144|
+145|        <!-- Floating stat -->
+146|        <div class="float-stat glass-strong" aria-hidden="true">
+147|          <p class="float-stat-num">+30</p>
+148|          <p class="float-stat-label">calls booked<br/>this month</p>
+149|        </div>
+150|      </div>
+151|    </div>
+152|  </section>
+153|
+154|  <!-- ============ SOCIAL PROOF / STATS ============ -->
+155|  <section class="stats" id="results" data-testid="stats-section">
+156|    <div class="stats-row">
+157|      <div class="stat reveal">
+158|        <p class="stat-num gradient-text">5</p>
+159|        <p class="stat-label">Coaches onboarding now</p>
+160|      </div>
+161|      <span class="divider"></span>
+162|      <div class="stat reveal">
+163|        <p class="stat-num gradient-text">+30</p>
+164|        <p class="stat-label">Discovery calls booked</p>
+165|      </div>
+166|      <span class="divider"></span>
+167|      <div class="stat reveal">
+168|        <p class="stat-num gradient-text">10+</p>
+169|        <p class="stat-label">Hours saved per week</p>
+170|      </div>
+171|      <span class="divider"></span>
+172|      <div class="stat reveal">
+173|        <p class="stat-num gradient-text">24/7</p>
+174|        <p class="stat-label">Always-on lead capture</p>
+175|      </div>
+176|    </div>
+177|  </section>
+178|
+179|  <!-- ============ HOW IT WORKS ============ -->
+180|  <section class="how" id="workflow" data-testid="how-section">
+181|    <div class="section-head reveal">
+182|      <span class="kicker">Process</span>
+183|      <h2>From cold lead to booked call — on autopilot</h2>
+184|      <p>A simple, three-step AI workflow tailored to your coaching offer.</p>
+185|    </div>
+186|
+187|    <div class="steps">
+188|      <div class="step reveal" data-testid="step-1">
+189|        <div class="step-num">01</div>
+190|        <div class="step-icon"><i data-lucide="magnet"></i></div>
+191|        <h3>Capture leads</h3>
+192|        <p>AI-powered landing pages, DM funnels and lead magnets pull qualified prospects from Instagram, TikTok and email.</p>
+193|      </div>
+194|
+195|      <div class="step reveal" data-testid="step-2">
+196|        <div class="step-num">02</div>
+197|        <div class="step-icon"><i data-lucide="filter"></i></div>
+198|        <h3>Qualify automatically</h3>
+199|        <p>Your custom AI assistant handles objections, screens fit, and nurtures cold leads into ready-to-buy clients in real time.</p>
+200|      </div>
+201|
+202|      <div class="step reveal" data-testid="step-3">
+203|        <div class="step-num">03</div>
+204|        <div class="step-icon"><i data-lucide="calendar-check"></i></div>
+205|        <h3>Book calls</h3>
+206|        <p>Hot leads land directly on your calendar with reminders and follow-ups — you wake up to a fully-booked week.</p>
+207|      </div>
+208|    </div>
+209|  </section>
+210|
+211|  <!-- ============ BENEFITS ============ -->
+212|  <section class="benefits" id="process" data-testid="benefits-section">
+213|    <div class="section-head reveal">
+214|      <span class="kicker">Why Botly</span>
+215|      <h2>Built for coaches who&nbsp;
+216|        <span class="gradient-text">want their time back</span>
+217|      </h2>
+218|    </div>
+219|
+220|    <div class="benefits-grid">
+221|      <article class="benefit-card reveal" data-testid="benefit-1">
+222|        <div class="benefit-icon"><i data-lucide="clock-3"></i></div>
+223|        <h3>Save 10+ hours a week</h3>
+224|        <p>Replace manual DMs, back-and-forth scheduling and follow-up emails with one AI system that runs while you sleep.</p>
+225|      </article>
+226|
+227|      <article class="benefit-card featured reveal" data-testid="benefit-2">
+228|        <div class="benefit-icon"><i data-lucide="trending-up"></i></div>
+229|        <h3>2-3× more conversions</h3>
+230|        <p>Instant replies, smart qualification and personalised offers turn lukewarm leads into paying clients consistently.</p>
+231|      </article>
+232|
+233|      <article class="benefit-card reveal" data-testid="benefit-3">
+234|        <div class="benefit-icon"><i data-lucide="repeat"></i></div>
+235|        <h3>Automated follow-ups</h3>
+236|        <p>No more "let me think about it" black holes. Our AI nurtures every lead until they book, buy, or unsubscribe.</p>
+237|      </article>
+238|    </div>
+239|  </section>
+240|
+241|  <!-- ============ CASE STUDY ============ -->
+242|  <section class="case" data-testid="case-section">
+243|    <div class="case-card reveal">
+244|      <div class="case-left">
+245|        <span class="kicker dark">Case study</span>
+246|        <h2>"Booked <span class="gradient-text">15 calls in 7 days</span> — without lifting a finger."</h2>
+247|        <p>A 1:1 mindset coach plugged Botly Media into her Instagram funnel on a Monday. By Sunday night, her calendar was packed with qualified discovery calls — and she'd closed 4 new clients.</p>
+248|
+249|        <div class="case-stats">
+250|          <div>
+251|            <p class="num">15</p><p class="lbl">calls booked</p>
+252|          </div>
+253|          <div>
+254|            <p class="num">7</p><p class="lbl">days</p>
+255|          </div>
+256|          <div>
+257|            <p class="num">4</p><p class="lbl">new clients closed</p>
+258|          </div>
+259|        </div>
+260|
+261|        <a href="https://calendly.com/botlymedia/new-meeting"
+262|           target="_blank" rel="noopener noreferrer"
+263|           class="btn btn-primary"
+264|           data-testid="case-cta">
+265|          Get the same result
+266|          <i data-lucide="arrow-right"></i>
+267|        </a>
+268|      </div>
+269|      <div class="case-right" aria-hidden="true">
+270|        <div class="case-bubble">"This paid for itself in 48 hours."</div>
+271|        <div class="case-meta">
+272|          <div class="case-avatar"></div>
+273|          <div>
+274|            <p class="case-name">Sarah K.</p>
+275|            <p class="case-role">Mindset Coach · London</p>
+276|          </div>
+277|        </div>
+278|        <div class="case-graph">
+279|          <div class="bar" style="--h:30%"></div>
+280|          <div class="bar" style="--h:55%"></div>
+281|          <div class="bar" style="--h:42%"></div>
+282|          <div class="bar" style="--h:78%"></div>
+283|          <div class="bar" style="--h:65%"></div>
+284|          <div class="bar" style="--h:90%"></div>
+285|          <div class="bar" style="--h:100%"></div>
+286|        </div>
+287|        <p class="case-graph-lbl">7-day call volume</p>
+288|      </div>
+289|    </div>
+290|  </section>
+291|
+292|  <!-- ============ FINAL CTA ============ -->
+293|  <section class="final-cta" data-testid="final-cta">
+294|    <div class="cta-card reveal">
+295|      <span class="kicker light">Limited spots</span>
+296|      <h2>Your next 10 clients are waiting.<br/>Let AI book them for you.</h2>
+297|      <p>Free 30-minute strategy audit. We'll map your funnel, spot the leaks, and show you exactly how AI can fill your calendar this month.</p>
+298|      <a href="https://calendly.com/botlymedia/new-meeting"
+299|         target="_blank" rel="noopener noreferrer"
+300|         class="btn btn-white btn-lg"
+301|         data-testid="final-cta-book">
+302|        Book Free Audit
+303|        <i data-lucide="arrow-up-right"></i>
+304|      </a>
+305|      <p class="micro">No pitch. No pressure. Just a clear plan.</p>
+306|    </div>
+307|  </section>
+308|
+309|  <!-- ============ FOOTER ============ -->
+310|  <footer class="footer" data-testid="footer">
+311|    <div class="footer-inner">
+312|      <a href="#" class="brand">
+313|        <img src="botly-logo.png" alt="Botly Media logo" class="brand-logo" />
+314|        <span class="brand-name">Botly Media</span>
+315|      </a>
+316|      <p class="footer-tag">AI systems for coaches who want freedom back.</p>
+317|      <div class="footer-links">
+318|        <a href="#workflow">Workflow</a>
+319|        <a href="#results">Results</a>
+320|        <a href="#process">Process</a>
+321|        <a href="https://calendly.com/botlymedia/new-meeting"
+322|           target="_blank" rel="noopener noreferrer"
+323|           data-testid="footer-cta">Book a call</a>
+324|      </div>
+325|      <p class="copy">© 2025 Botly Media. All rights reserved.</p>
+326|    </div>
+327|  </footer>
+328|
+329|  <script>
+330|    // Initialize Lucide icons after CDN loads
+331|    window.addEventListener('load', () => {
+332|      if (window.lucide) window.lucide.createIcons();
+333|    });
+334|
+335|    // Scroll reveal animation (IntersectionObserver)
+336|    const io = new IntersectionObserver((entries) => {
+337|      entries.forEach(e => {
+338|        if (e.isIntersecting) {
+339|          e.target.classList.add('in');
+340|          io.unobserve(e.target);
+341|        }
+342|      });
+343|    }, { threshold: 0.12 });
+344|    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+345|
+346|    // Mobile menu toggle
+347|    const toggle = document.querySelector('.nav-mobile-toggle');
+348|    const links = document.querySelector('.nav-links');
+349|    if (toggle) {
+350|      toggle.addEventListener('click', () => {
+351|        links.classList.toggle('open');
+352|        toggle.classList.toggle('active');
+353|      });
+354|    }
+355|
+356|    // Navbar shadow on scroll
+357|    const nav = document.querySelector('.nav');
+358|    window.addEventListener('scroll', () => {
+359|      if (window.scrollY > 20) nav.classList.add('scrolled');
+360|      else nav.classList.remove('scrolled');
+361|    });
+362|  </script>
+363|</body>
+364|</html>
+365|
+[End of file]
