@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botly Media — AI-Powered Growth Systems</title>
+    <meta name="description" content="Botly Media fills your pipeline with AI-powered lead generation systems. 3X leads, 60% lower CPL, 48h go-live." />
+    <meta property="og:title" content="Botly Media — AI-Powered Growth Systems" />
+    <meta property="og:description" content="We Fill Your Pipeline With AI Power. Book your free strategy audit today." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      /* ─── CSS Custom Properties ─────────────────────────────── */
+      :root {
+        --pink:   #FF4081;
+        --orange: #FF8C42;
+        --gold:   #F4B942;
+        --grad: linear-gradient(135deg, #FF4081 0%, #FF8C42 50%, #F4B942 100%);
+        --grad-text: linear-gradient(135deg, #FF4081 0%, #FF8C42 55%, #F4B942 100%);
+        --white: #ffffff;
+        --off-white: #FFF9F5;
+        --warm-gray: #F7F3EF;
+        --text-dark: #1A1A1A;
+        --text-mid: #4A4A4A;
+        --text-light: #888;
+        --border: #E8E0D8;
+        --shadow: 0 4px 24px rgba(255,64,129,0.08);
+        --shadow-lg: 0 16px 48px rgba(255,64,129,0.14);
+        --radius: 16px;
+        --radius-sm: 10px;
+        --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* ─── Reset & Base ─────────────────────────────────────── */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; font-size: 16px; }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-dark);
+        background: var(--white);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      img { max-width: 100%; display: block; }
+      a { text-decoration: none; color: inherit; }
+      ul { list-style: none; }
+
+      /* ─── Typography Helpers ───────────────────────────────── */
+      .grad-text {
+        background: var(--grad-text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      /* ─── Buttons ──────────────────────────────────────────── */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: var(--grad);
+        color: white;
+        box-shadow: 0 4px 20px rgba(255,64,129,0.35);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(255,64,129,0.45);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--text-dark);
+        border: 2px solid var(--border);
+      }
+      .btn-outline:hover {
+        border-color: var(--pink);
+        color: var(--pink);
+        transform: translateY(-2px);
+      }
+      .btn-white {
+        background: white;
+        color: var(--text-dark);
+        font-weight: 700;
+      }
+      .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+
+      /* ─── Section Helpers ──────────────────────────────────── */
+      .section { padding: 96px 0; }
+      .section-alt { background: var(--off-white); }
+      .section-warm { background: var(--warm-gray); }
+      .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+      .section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,64,129,0.08);
+        color: var(--pink);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin-bottom: 16px;
+      }
+      .section-title {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        margin-bottom: 16px;
+      }
+      .section-sub {
+        font-size: 1.05rem;
+        color: var(--text-mid);
+        max-width: 560px;
+        line-height: 1.75;
+      }
+      .section-head { text-align: center; margin-bottom: 64px; }
+      .section-head .section-sub { margin: 0 auto; }
+
+      /* ─── Scroll Reveal ────────────────────────────────────── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1);
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .reveal-delay-1 { transition-delay: 0.1s; }
+      .reveal-delay-2 { transition-delay: 0.2s; }
+      .reveal-delay-3 { transition-delay: 0.3s; }
+      .reveal-delay-4 { transition-delay: 0.4s; }
+      .reveal-delay-5 { transition-delay: 0.5s; }
+
+      /* ─── Navbar ───────────────────────────────────────────── */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 18px 0;
+        transition: var(--transition);
+      }
+      .navbar.scrolled {
+        background: rgba(255,255,255,0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(232,224,216,0.6);
+        padding: 12px 0;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 1.1rem;
+        letter-spacing: -0.01em;
+        flex-shrink: 0;
+        color: var(--text-dark);
+      }
+      .nav-logo-icon {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .nav-logo-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+      }
+      .nav-links a {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-mid);
+        transition: color var(--transition);
+        position: relative;
+      }
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--grad);
+        border-radius: 2px;
+        transition: width var(--transition);
+      }
+      .nav-links a:hover { color: var(--pink); }
+      .nav-links a:hover::after { width: 100%; }
+      .nav-cta { flex-shrink: 0; }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 4px;
+        background: none;
+        border: none;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text-dark);
+        border-radius: 2px;
+        transition: var(--transition);
+      }
+      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .hamburger.open span:nth-child(2) { opacity: 0; }
+      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(20px);
+        z-index: 999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        display: flex;
+      }
+      .mobile-menu.open { transform: translateX(0); }
+      .mobile-menu a {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        transition: color var(--transition);
+      }
+      .mobile-menu a:hover { color: var(--pink); }
+      .mobile-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--text-mid);
+        background: none;
+        border: none;
+        line-height: 1;
+      }
+
+      /* ─── Hero ─────────────────────────────────────────────── */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 90px;
+        background: var(--white);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(ellipse, rgba(255,64,129,0.07) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .hero::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(ellipse, rgba(244,185,66,0.06) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+        padding: 48px 0;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,64,129,0.07);
+        border: 1px solid rgba(255,64,129,0.2);
+        color: var(--pink);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 8px 16px;
+        border-radius: 50px;
+        margin-bottom: 24px;
+      }
+      .hero-badge-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--pink);
+        border-radius: 50%;
+        animation: pulse 1.8s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.4); }
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.8rem);
+        margin-bottom: 24px;
+        line-height: 1.1;
+      }
+      .hero-sub {
+        font-size: 1.1rem;
+        color: var(--text-mid);
+        line-height: 1.75;
+        margin-bottom: 36px;
+        max-width: 480px;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .trust-flags {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .trust-flags-label {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-right: 4px;
+      }
+      .trust-flag {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--warm-gray);
+        border: 1px solid var(--border);
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--text-mid);
+      }
+      /* Stats Card */
+      .hero-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--grad);
+      }
+      .hero-card-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-light);
+        margin-bottom: 28px;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+      .stat-item { text-align: center; }
+      .stat-num {
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .stat-label { font-size: 0.78rem; color: var(--text-light); font-weight: 600; }
+      .hero-card-live {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--off-white);
+        border-radius: 12px;
+        padding: 14px 18px;
+      }
+      .live-dot {
+        width: 8px;
+        height: 8px;
+        background: #22c55e;
+        border-radius: 50%;
+        animation: pulse 1.5s ease-in-out infinite;
+        flex-shrink: 0;
+      }
+      .live-text { font-size: 0.85rem; font-weight: 600; color: var(--text-mid); }
+
+      /* ─── Trust Bar ────────────────────────────────────────── */
+      .trust-bar {
+        background: var(--off-white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 28px 0;
+      }
+      .trust-bar-inner {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .trust-bar-label {
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-light);
+        white-space: nowrap;
+      }
+      .trust-bar-divider {
+        width: 1px;
+        height: 20px;
+        background: var(--border);
+        flex-shrink: 0;
+      }
+      .industry-tag {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 14px;
+        border-radius: 50px;
+        background: white;
+        border: 1px solid var(--border);
+        font-size: 0.83rem;
+        font-weight: 600;
+        color: var(--text-mid);
+        white-space: nowrap;
+        transition: var(--transition);
+      }
+      .industry-tag:hover {
+        border-color: var(--pink);
+        color: var(--pink);
+        box-shadow: 0 2px 12px rgba(255,64,129,0.1);
+      }
+      .industry-icon {
+        width: 22px;
+        height: 22px;
+        background: var(--grad);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+      }
+
+      /* ─── Problem / Solution ───────────────────────────────── */
+      .ps-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .ps-col-title {
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-bottom: 28px;
+      }
+      .pain-list { display: flex; flex-direction: column; gap: 16px; }
+      .pain-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 18px;
+        background: #FFF5F5;
+        border: 1px solid #FFE0E6;
+        border-radius: var(--radius-sm);
+      }
+      .pain-icon {
+        width: 32px;
+        height: 32px;
+        background: rgba(255,64,129,0.12);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1rem;
+      }
+      .pain-text { font-size: 0.92rem; font-weight: 600; color: #8B1C3A; line-height: 1.5; }
+      .solution-box {
+        background: var(--grad);
+        border-radius: var(--radius);
+        padding: 36px;
+        color: white;
+      }
+      .solution-box-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 24px; color: white; }
+      .solution-list { display: flex; flex-direction: column; gap: 14px; }
+      .solution-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .solution-check {
+        width: 22px;
+        height: 22px;
+        background: rgba(255,255,255,0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+        font-size: 0.7rem;
+        color: white;
+      }
+      .solution-text { font-size: 0.95rem; font-weight: 600; line-height: 1.5; color: white; }
+
+      /* ─── Services ─────────────────────────────────────────── */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .service-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .service-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--grad);
+        transform: scaleX(0);
+        transition: transform var(--transition);
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(255,64,129,0.2);
+      }
+      .service-card:hover::after { transform: scaleX(1); }
+      .service-icon {
+        width: 52px;
+        height: 52px;
+        background: var(--grad);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+      .service-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+      .service-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+
+      /* ─── Results ──────────────────────────────────────────── */
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .result-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 36px 28px;
+        text-align: center;
+        transition: var(--transition);
+      }
+      .result-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+      .result-num {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+      .result-label { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+      .result-sub { font-size: 0.83rem; color: var(--text-light); line-height: 1.5; }
+
+      /* ─── How It Works ─────────────────────────────────────── */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        position: relative;
+      }
+      .steps-grid::before {
+        content: '';
+        position: absolute;
+        top: 36px;
+        left: calc(16.67% + 24px);
+        right: calc(16.67% + 24px);
+        height: 2px;
+        background: linear-gradient(90deg, rgba(255,64,129,0.3), rgba(244,185,66,0.3));
+      }
+      .step-card { text-align: center; padding: 0 16px; }
+      .step-num {
+        width: 72px;
+        height: 72px;
+        background: var(--grad);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+        margin: 0 auto 24px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 8px 24px rgba(255,64,129,0.3);
+      }
+      .step-card h3 { font-size: 1.15rem; margin-bottom: 12px; }
+      .step-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
+
+      /* ─── Testimonials ─────────────────────────────────────── */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .testimonial-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+      .stars { display: flex; gap: 3px; font-size: 1rem; color: var(--orange); }
+      .testimonial-text {
+        font-size: 0.93rem;
+        line-height: 1.75;
+        color: var(--text-mid);
+        flex: 1;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .author-avatar {
+        width: 44px;
+        height: 44px;
+        background: var(--grad);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: white;
+        flex-shrink: 0;
+      }
+      .author-name { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); }
+      .author-title { font-size: 0.78rem; color: var(--text-light); }
+
+      /* ─── FAQ ──────────────────────────────────────────────── */
+      .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 800px; margin: 0 auto; }
+      .faq-item {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        transition: border-color var(--transition), box-shadow var(--transition);
+      }
+      .faq-item.open { border-color: rgba(255,64,129,0.3); box-shadow: 0 4px 16px rgba(255,64,129,0.08); }
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 22px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        text-align: left;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        gap: 16px;
+        transition: color var(--transition);
+      }
+      .faq-item.open .faq-question { color: var(--pink); }
+      .faq-icon {
+        width: 28px;
+        height: 28px;
+        background: var(--warm-gray);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: var(--transition);
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--text-mid);
+        line-height: 1;
+      }
+      .faq-item.open .faq-icon {
+        background: var(--grad);
+        color: white;
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+      }
+      .faq-answer-inner {
+        padding: 0 24px 22px;
+        font-size: 0.9rem;
+        color: var(--text-mid);
+        line-height: 1.75;
+      }
+
+      /* ─── CTA + Contact ────────────────────────────────────── */
+      .cta-section {
+        background: var(--grad);
+        padding: 96px 0;
+      }
+      .cta-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .cta-left { color: white; }
+      .cta-left h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; color: white; }
+      .cta-left p { font-size: 1.05rem; opacity: 0.88; line-height: 1.75; margin-bottom: 36px; color: white; }
+      .cta-contact-links { display: flex; flex-direction: column; gap: 14px; }
+      .cta-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: white;
+        font-size: 0.93rem;
+        font-weight: 600;
+        opacity: 0.9;
+        transition: opacity var(--transition);
+      }
+      .cta-contact-item:hover { opacity: 1; }
+      .cta-contact-icon {
+        width: 36px;
+        height: 36px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+        color: white;
+      }
+      /* Contact Form */
+      .contact-form {
+        background: white;
+        border-radius: var(--radius);
+        padding: 40px;
+        box-shadow: 0 24px 64px rgba(0,0,0,0.15);
+      }
+      .form-title { font-size: 1.3rem; margin-bottom: 8px; color: var(--text-dark); }
+      .form-sub { font-size: 0.87rem; color: var(--text-light); margin-bottom: 28px; }
+      .form-group { margin-bottom: 18px; }
+      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .form-group label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--text-mid);
+        margin-bottom: 7px;
+        letter-spacing: 0.04em;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        background: var(--off-white);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 12px 14px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        transition: border-color var(--transition), box-shadow var(--transition);
+        outline: none;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .form-group select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        background-color: var(--off-white);
+        padding-right: 36px;
+        cursor: pointer;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--pink);
+        box-shadow: 0 0 0 3px rgba(255,64,129,0.1);
+        background: white;
+      }
+      .form-group textarea { resize: vertical; min-height: 90px; }
+      .form-submit {
+        width: 100%;
+        background: var(--grad);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 32px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 4px 20px rgba(255,64,129,0.35);
+      }
+      .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,64,129,0.45); }
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 32px 16px;
+      }
+      .form-success-icon { font-size: 3rem; margin-bottom: 16px; }
+      .form-success h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--text-dark); }
+      .form-success p { font-size: 0.9rem; color: var(--text-mid); }
+
+      /* ─── Footer ───────────────────────────────────────────── */
+      .footer {
+        background: #111;
+        color: rgba(255,255,255,0.6);
+        padding: 48px 0 32px;
+      }
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 1rem;
+        color: white;
+      }
+      .footer-logo-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .footer-logo-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .footer-links {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+      .footer-links a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.5);
+        transition: color var(--transition);
+      }
+      .footer-links a:hover { color: var(--pink); }
+      .footer-copy {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 24px;
+        text-align: center;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.35);
+      }
+
+      /* ─── WhatsApp Float ───────────────────────────────────── */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 999;
+        width: 56px;
+        height: 56px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+        transition: var(--transition);
+      }
+      .whatsapp-float:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+      }
+
+      /* ─── Responsive ───────────────────────────────────────── */
+      @media (max-width: 1024px) {
+        .services-grid { grid-template-columns: repeat(2, 1fr); }
+        .results-grid { grid-template-columns: repeat(2, 1fr); }
+        .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 768px) {
+        .section { padding: 64px 0; }
+        .nav-links, .nav-cta { display: none; }
+        .hamburger { display: flex; }
+        .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+        .hero h1 { font-size: 2.2rem; }
+        .hero-card { max-width: 400px; }
+        .ps-grid { grid-template-columns: 1fr; }
+        .services-grid { grid-template-columns: 1fr; }
+        .results-grid { grid-template-columns: repeat(2, 1fr); }
+        .steps-grid { grid-template-columns: 1fr; }
+        .steps-grid::before { display: none; }
+        .testimonials-grid { grid-template-columns: 1fr; }
+        .cta-inner { grid-template-columns: 1fr; gap: 48px; }
+        .form-row { grid-template-columns: 1fr; }
+        .footer-inner { flex-direction: column; text-align: center; }
+        .footer-links { justify-content: center; }
+        .trust-bar-inner { gap: 8px; }
+      }
+      @media (max-width: 480px) {
+        .container { padding: 0 16px; }
+        .hero-buttons { flex-direction: column; align-items: flex-start; }
+        .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+        .results-grid { grid-template-columns: 1fr; }
+        .contact-form { padding: 28px 20px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ════════════════════════ NAVBAR ════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">
+              <img src="/ChatGPT_Image_May_9,_2026,_02_09_56_PM.png" alt="Botly Media Logo" />
+            </div>
+          </a>
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+          <a href="https://calendly.com/botlymedia/new-meeting" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Book Free Audit</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#10005;</button>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#results" class="mobile-nav-link">Results</a>
+      <a href="#process" class="mobile-nav-link">Process</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="https://calendly.com/botlymedia/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Book Free Audit</a>
+    </div>
+
+    <!-- ════════════════════════ HERO ════════════════════════ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content reveal">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              AI-Powered Growth Systems
+            </div>
+            <h1>We Fill Your Pipeline With <span class="grad-text">AI Power</span></h1>
+            <p class="hero-sub">Stop chasing cold leads manually. Our intelligent systems work 24/7 to capture, qualify, and convert leads — so you can focus on closing deals and growing your business.</p>
+            <div class="hero-buttons">
+              <a href="https://calendly.com/botlymedia/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book Free Strategy Audit
+              </a>
+              <a href="#process" class="btn btn-outline">
+                See How It Works
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+            <div class="trust-flags">
+              <span class="trust-flags-label">Trusted in:</span>
+              <span class="trust-flag">🇮🇳 India</span>
+              <span class="trust-flag">🇺🇸 USA</span>
+              <span class="trust-flag">🇬🇧 UK</span>
+              <span class="trust-flag">🇦🇪 UAE</span>
+              <span class="trust-flag">🇨🇦 Canada</span>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="hero-card">
+              <p class="hero-card-title">Your AI System — Live Results</p>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-num grad-text">3X</div>
+                  <div class="stat-label">More Leads</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num grad-text">60%</div>
+                  <div class="stat-label">Lower CPL</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num grad-text">24/7</div>
+                  <div class="stat-label">Active System</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num grad-text">48h</div>
+                  <div class="stat-label">Go Live</div>
+                </div>
+              </div>
+              <div class="hero-card-live">
+                <span class="live-dot"></span>
+                <span class="live-text">AI system actively generating leads for clients right now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ TRUST BAR ════════════════════════ -->
+    <div class="trust-bar">
+      <div class="container">
+        <div class="trust-bar-inner">
+          <span class="trust-bar-label">Industries We Serve</span>
+          <div class="trust-bar-divider"></div>
+          <div class="industry-tag"><div class="industry-icon">🏠</div> Real Estate</div>
+          <div class="industry-tag"><div class="industry-icon">🎓</div> Coaching</div>
+          <div class="industry-tag"><div class="industry-icon">🛍</div> E-Commerce</div>
+          <div class="industry-tag"><div class="industry-icon">🏥</div> Healthcare</div>
+          <div class="industry-tag"><div class="industry-icon">💻</div> SaaS</div>
+          <div class="industry-tag"><div class="industry-icon">💰</div> Finance</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════ PROBLEM / SOLUTION ════════════════════════ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag">The Problem &amp; Our Solution</div>
+          <h2 class="section-title">Are You Leaving <span class="grad-text">Money on the Table?</span></h2>
+          <p class="section-sub">Most businesses struggle with the same lead generation nightmares. Here's how Botly Media fixes them.</p>
+        </div>
+        <div class="ps-grid">
+          <div class="reveal reveal-delay-1">
+            <p class="ps-col-title">The Problems You're Facing</p>
+            <div class="pain-list">
+              <div class="pain-item">
+                <div class="pain-icon">😤</div>
+                <p class="pain-text">Wasting hours chasing leads manually, following up across WhatsApp, email, and calls with no system.</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">💸</div>
+                <p class="pain-text">Burning ad budget on campaigns with poor targeting and no automated follow-up pipeline to convert prospects.</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">🥶</div>
+                <p class="pain-text">Leads going cold overnight because no one responded in time — your competitor got the deal instead.</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">⏰</div>
+                <p class="pain-text">No time to actually grow your business because lead management is eating your entire day.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <p class="ps-col-title">The Botly Media Solution</p>
+            <div class="solution-box">
+              <p class="solution-box-title">Your AI Growth Engine — Built in 48 Hours</p>
+              <div class="solution-list">
+                <div class="solution-item">
+                  <div class="solution-check">✓</div>
+                  <p class="solution-text">AI chatbots capture and qualify leads 24/7 — no human intervention needed, ever.</p>
+                </div>
+                <div class="solution-item">
+                  <div class="solution-check">✓</div>
+                  <p class="solution-text">Automated multi-channel follow-up via WhatsApp, email, and SMS within seconds of lead capture.</p>
+                </div>
+                <div class="solution-item">
+                  <div class="solution-check">✓</div>
+                  <p class="solution-text">Seamless CRM integration so your team only talks to warm, pre-qualified prospects ready to buy.</p>
+                </div>
+                <div class="solution-item">
+                  <div class="solution-check">✓</div>
+                  <p class="solution-text">AI-optimised ad targeting that slashes cost-per-lead by up to 60% while tripling volume.</p>
+                </div>
+                <div class="solution-item">
+                  <div class="solution-check">✓</div>
+                  <p class="solution-text">Real-time growth analytics dashboard giving you complete visibility and control over your pipeline.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ SERVICES ════════════════════════ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag">Our Services</div>
+          <h2 class="section-title">Everything You Need to <span class="grad-text">Scale with AI</span></h2>
+          <p class="section-sub">Six integrated systems working together to build your unstoppable lead generation machine.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon">🤖</div>
+            <h3>AI Lead Capture</h3>
+            <p>Intelligent AI chatbots and landing pages that qualify visitors in real-time, capturing high-intent leads around the clock without lifting a finger.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon">⚡</div>
+            <h3>Automated Follow-Up</h3>
+            <p>Multi-channel automated sequences via WhatsApp, email, and SMS that respond within seconds and nurture leads to a booked call on autopilot.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-3">
+            <div class="service-icon">🔗</div>
+            <h3>CRM Integration</h3>
+            <p>Seamlessly connect your existing CRM or set up a new one. Every lead is automatically logged, scored, and assigned — zero manual data entry.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon">📊</div>
+            <h3>Paid Ads + AI</h3>
+            <p>AI-powered Meta and Google ad management that continuously optimises targeting, creatives, and bidding to drive the lowest cost-per-lead possible.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon">📅</div>
+            <h3>Auto Booking System</h3>
+            <p>Prospects book directly into your calendar. Automated reminders reduce no-shows by 70%, keeping your sales pipeline packed and flowing.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-3">
+            <div class="service-icon">📈</div>
+            <h3>Growth Analytics</h3>
+            <p>A live dashboard showing you exactly where leads come from, how they convert, and where to double down — real-time insights for smarter decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ RESULTS ════════════════════════ -->
+    <section class="section section-alt" id="results">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag">Proven Results</div>
+          <h2 class="section-title">Numbers That <span class="grad-text">Speak for Themselves</span></h2>
+          <p class="section-sub">Real results our clients are experiencing right now with their AI-powered growth systems.</p>
+        </div>
+        <div class="results-grid">
+          <div class="result-card reveal reveal-delay-1">
+            <div class="result-num grad-text">3X</div>
+            <div class="result-label">More Leads Generated</div>
+            <div class="result-sub">Average increase in qualified lead volume within the first 60 days of go-live.</div>
+          </div>
+          <div class="result-card reveal reveal-delay-2">
+            <div class="result-num grad-text">60%</div>
+            <div class="result-label">Lower Cost Per Lead</div>
+            <div class="result-sub">AI targeting and automation dramatically cut acquisition costs vs. manual campaigns.</div>
+          </div>
+          <div class="result-card reveal reveal-delay-3">
+            <div class="result-num grad-text">24/7</div>
+            <div class="result-label">Always-On System</div>
+            <div class="result-sub">Your AI works nights, weekends, and holidays — capturing leads while you sleep.</div>
+          </div>
+          <div class="result-card reveal reveal-delay-1">
+            <div class="result-num grad-text">10+</div>
+            <div class="result-label">Hours Saved Per Week</div>
+            <div class="result-sub">Automation eliminates manual follow-ups, data entry, and scheduling tasks entirely.</div>
+          </div>
+          <div class="result-card reveal reveal-delay-2">
+            <div class="result-num grad-text">48h</div>
+            <div class="result-label">Fast Go-Live</div>
+            <div class="result-sub">From strategy call to live AI system in just 48 hours. No long agency timelines.</div>
+          </div>
+          <div class="result-card reveal reveal-delay-3">
+            <div class="result-num grad-text">5X</div>
+            <div class="result-label">Return on Investment</div>
+            <div class="result-sub">Clients consistently see 5X or greater ROI on their Botly Media investment within 90 days.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ HOW IT WORKS ════════════════════════ -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag">How It Works</div>
+          <h2 class="section-title">From Zero to <span class="grad-text">AI-Powered</span> in 3 Steps</h2>
+          <p class="section-sub">A simple, fast, and battle-tested process to get your lead generation machine live and running.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal reveal-delay-1">
+            <div class="step-num">1</div>
+            <h3>Free AI Audit</h3>
+            <p>Book a free 30-minute strategy call. We deep-dive into your current funnel, identify the exact gaps costing you leads, and map out a custom AI system blueprint specific to your business and industry.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-2">
+            <div class="step-num">2</div>
+            <h3>Build Your System</h3>
+            <p>Our team builds your complete AI lead generation system — chatbots, automation flows, CRM setup, and ad campaigns — all configured and tested. You're live within 48 hours, not weeks.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-3">
+            <div class="step-num">3</div>
+            <h3>Scale &amp; Grow</h3>
+            <p>Watch qualified leads flow in automatically. We continuously optimise your system with weekly reporting, A/B testing, and scaling strategies to compound your results month over month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ TESTIMONIALS ════════════════════════ -->
+    <section class="section section-warm">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag">Client Stories</div>
+          <h2 class="section-title">What Our Clients <span class="grad-text">Are Saying</span></h2>
+          <p class="section-sub">Real feedback from businesses that transformed their growth with Botly Media.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Botly Media completely transformed our real estate business. We went from spending 4 hours a day chasing leads to having a fully automated system doing it for us. In 60 days our lead volume tripled and our cost per inquiry dropped by half. The ROI has been absolutely phenomenal."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RV</div>
+              <div>
+                <div class="author-name">Rahul Verma</div>
+                <div class="author-title">Founder, Verma Properties — Mumbai, India</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"I was sceptical about AI for my coaching business, but Botly Media proved me wrong. The automated follow-up system books discovery calls while I'm asleep. My calendar went from half-empty to fully booked within three weeks. Genuinely one of the best investments I've made."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SC</div>
+              <div>
+                <div class="author-name">Sarah Collins</div>
+                <div class="author-title">Executive Business Coach — London, UK</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-3">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"As a healthcare clinic in Dubai, we needed a compliant and professional lead system. Botly Media delivered exactly that — a fully automated patient inquiry system with instant WhatsApp follow-up. Our booking rate increased by 80% and the team spends far less time on admin."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div>
+                <div class="author-name">Dr. Aisha Khalid</div>
+                <div class="author-title">Medical Director, Khalid Wellness Clinic — Dubai, UAE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ FAQ ════════════════════════ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title">Questions We <span class="grad-text">Get Asked Often</span></h2>
+          <p class="section-sub">Everything you need to know before booking your free strategy audit.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question">
+              How quickly can I see results after signing up?
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Most clients see their AI system live within 48 hours of the strategy call. Lead generation results typically begin within the first week. By day 30, clients consistently see 2–3X their previous lead volume. We don't do slow agency timelines — we move fast and deliver measurable results from day one.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question">
+              Do I need any technical knowledge to use the system?
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Zero technical knowledge required. We build and manage everything for you — from the AI chatbots and automation flows to the CRM integration and ad campaigns. You simply check your live dashboard and take calls with qualified leads that appear in your calendar. We handle all the technical complexity behind the scenes.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question">
+              What industries does Botly Media work best for?
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Our AI systems perform exceptionally well across Real Estate, Coaching &amp; Consulting, E-Commerce, Healthcare &amp; Wellness, SaaS, and Finance. If your business relies on generating qualified leads and booking calls or appointments, our systems will work for you. We customise every build to your specific industry and offer type.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-4">
+            <button class="faq-question">
+              What platforms and tools does the system integrate with?
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We integrate with all major CRMs including HubSpot, GoHighLevel, Zoho, and Salesforce. Our automation connects with WhatsApp Business, Gmail, and major SMS providers. For ads, we run on Meta (Facebook/Instagram) and Google. If you have existing tools you love, we'll make them work seamlessly with your new AI system.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-5">
+            <button class="faq-question">
+              How is Botly Media different from a traditional marketing agency?
+              <div class="faq-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Traditional agencies charge monthly retainers while manually managing campaigns with slow response times and minimal automation. Botly Media builds you an AI-powered growth system that runs 24/7 without human intervention, responds to leads in seconds, and continuously self-optimises. You get better results, faster go-live, and a system you own — not just a service you rent.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ CTA + CONTACT ════════════════════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-left reveal">
+            <h2>Ready to 10X Your Leads?</h2>
+            <p>Stop losing business to competitors. Let us build your AI-powered lead machine in 48 hours. Book a free strategy audit and discover exactly how many leads you're leaving on the table.</p>
+            <a href="https://calendly.com/botlymedia/new-meeting" target="_blank" rel="noopener" class="btn btn-white" style="margin-bottom: 36px; color: #1A1A1A;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Book via Calendly
+            </a>
+            <div class="cta-contact-links">
+              <a href="mailto:preetsharma@botlymedia.xyz" class="cta-contact-item">
+                <div class="cta-contact-icon">✉</div>
+                preetsharma@botlymedia.xyz
+              </a>
+              <a href="https://wa.me/919911558262" target="_blank" rel="noopener" class="cta-contact-item">
+                <div class="cta-contact-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.05-1.35C8.47 21.52 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                </div>
+                +91 9911558262
+              </a>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="contact-form">
+              <h3 class="form-title">Get Your Free AI Audit</h3>
+              <p class="form-sub">Fill in your details and we'll be in touch within 2 hours.</p>
+              <form id="leadForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="fname">Full Name *</label>
+                    <input type="text" id="fname" name="name" placeholder="Your name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="femail">Email Address *</label>
+                    <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fwhatsapp">WhatsApp Number *</label>
+                  <input type="tel" id="fwhatsapp" name="whatsapp" placeholder="+91 00000 00000" required />
+                </div>
+                <div class="form-group">
+                  <label for="fbusiness">Business Type *</label>
+                  <select id="fbusiness" name="business_type" required>
+                    <option value="" disabled selected>Select your industry</option>
+                    <option>Real Estate</option>
+                    <option>Coaching / Consulting</option>
+                    <option>E-Commerce</option>
+                    <option>Healthcare / Wellness</option>
+                    <option>SaaS / Tech</option>
+                    <option>Finance</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fchallenge">Your Biggest Lead Generation Challenge *</label>
+                  <textarea id="fchallenge" name="challenge" placeholder="Describe your current challenge in 1-2 sentences..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send My Audit Request &#8594;</button>
+              </form>
+              <div class="form-success" id="formSuccess">
+                <div class="form-success-icon">🎉</div>
+                <h3>Request Received!</h3>
+                <p>Thanks! We'll review your details and reach out within 2 hours to schedule your free AI audit call.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ FOOTER ════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <img src="/ChatGPT_Image_May_9,_2026,_02_09_56_PM.png" alt="Botly Media Logo" />
+            </div>
+            <span>BOTLY MEDIA</span>
+          </div>
+          <nav class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#results">Results</a>
+            <a href="#process">Process</a>
+            <a href="#faq">FAQ</a>
+            <a href="mailto:preetsharma@botlymedia.xyz">Contact</a>
+          </nav>
+          <a href="https://calendly.com/botlymedia/new-meeting" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem; padding: 11px 22px;">Book Free Audit</a>
+        </div>
+        <div class="footer-copy">
+          &copy; 2026 Botly Media. All rights reserved. AI-Powered Growth Systems.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ════════════════════════ WHATSAPP FLOAT ════════════════════════ -->
+    <a href="https://wa.me/919911558262" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.05-1.35C8.47 21.52 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.64 0-3.16-.46-4.46-1.24l-.32-.19-3 .79.82-2.92-.21-.33A7.945 7.945 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
+      </svg>
+    </a>
+
+    <!-- ════════════════════════ SCRIPTS ════════════════════════ -->
+    <div id="root" style="display:none"></div>
+    <script>
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+
+      // Mobile menu
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileClose = document.getElementById('mobileClose');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.add('open');
+        mobileMenu.classList.add('open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+
+      function closeMobileMenu() {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      mobileClose.addEventListener('click', closeMobileMenu);
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // Scroll Reveal
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const answer = item.querySelector('.faq-answer');
+          const isOpen = item.classList.contains('open');
+
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-answer').style.maxHeight = '0';
+          });
+
+          if (!isOpen) {
+            item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Form Submit
+      document.getElementById('leadForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(this);
+        const body = [
+          'Name: ' + data.get('name'),
+          'Email: ' + data.get('email'),
+          'WhatsApp: ' + data.get('whatsapp'),
+          'Business Type: ' + data.get('business_type'),
+          'Challenge: ' + data.get('challenge')
+        ].join('\n');
+
+        const mailtoLink = 'mailto:preetsharma@botlymedia.xyz?subject=Free AI Audit Request - ' +
+          encodeURIComponent(data.get('name')) + '&body=' + encodeURIComponent(body);
+        window.open(mailtoLink, '_blank');
+
+        this.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+          const id = anchor.getAttribute('href');
+          if (id === '#') return;
+          const target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
